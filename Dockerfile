@@ -15,11 +15,11 @@ RUN DEBIAN_FRONTEND=noninteractive  apt-get install -y locales
 RUN rm -rf /var/lib/apt/lists/*
 
 # Ensure that we always use UTF-8 and with Canadian English locale
-RUN locale-gen en_CA.UTF-8
+RUN locale-gen en_CA.UTF-8 en_US.UTF-8
 
 COPY ./default_locale /etc/default/locale
 RUN chmod 0755 /etc/default/locale
 
-ENV LC_ALL=en_CA.UTF-8
-ENV LANG=en_CA.UTF-8
-ENV LANGUAGE=en_CA.UTF-8
+ENV LC_ALL=en_US.UTF-8
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US.UTF-8

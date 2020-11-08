@@ -23,3 +23,6 @@ RUN chmod 0755 /etc/default/locale
 ENV LC_ALL=en_US.UTF-8
 ENV LANG=en_US.UTF-8
 ENV LANGUAGE=en_US.UTF-8
+
+COPY ./yocto/repo-1 /usr/local/bin/repo
+

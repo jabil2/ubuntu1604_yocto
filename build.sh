@@ -1,1 +1,1 @@
-docker build . -t murilopontes/ubuntu1604_yocto
+docker build files -t murilopontes/ubuntu1604_yocto

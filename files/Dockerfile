@@ -12,7 +12,6 @@ mercurial automake groff curl lzop asciidoc u-boot-tools dos2unix mtd-utils pv \
 libncurses5 libncurses5-dev libncursesw5-dev libelf-dev zlib1g-dev bc
 
 RUN DEBIAN_FRONTEND=noninteractive  apt-get install -y locales 
-RUN rm -rf /var/lib/apt/lists/*
 
 # Ensure that we always use UTF-8 and with Canadian English locale
 RUN locale-gen en_CA.UTF-8 en_US.UTF-8
@@ -24,5 +23,11 @@ ENV LC_ALL=en_US.UTF-8
 ENV LANG=en_US.UTF-8
 ENV LANGUAGE=en_US.UTF-8
 
-COPY ./yocto/repo-1 /usr/local/bin/repo
+COPY ./repo-1 /usr/local/bin/repo
 
+COPY ./opt /opt
+
+#ubuntu 16.04 missing i2c/smbus.h file
+#i2c-tools  #
+#libi2c-dev # do not install to avoid conflicts betweem i2c/i2c-dev(old) and i2c/smbus.h(new)
+RUN DEBIAN_FRONTEND=noninteractive  apt-get install -y cmake libinput-dev  ninja-build

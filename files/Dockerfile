@@ -25,7 +25,10 @@ ENV LANGUAGE=en_US.UTF-8
 
 COPY ./repo-1 /usr/local/bin/repo
 
-COPY ./opt /opt
+#COPY ./opt /opt
+COPY ./sdk/fsl-imx-xwayland-glibc-x86_64-fsl-image-gui-aarch64-toolchain-4.14-sumo.sh /opt
+RUN /opt/fsl-imx-xwayland-glibc-x86_64-fsl-image-gui-aarch64-toolchain-4.14-sumo.sh -y
+
 
 #ubuntu 16.04 missing i2c/smbus.h file
 #i2c-tools  #

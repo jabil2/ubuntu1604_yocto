@@ -9,6 +9,7 @@ Tested boards
 - sh push.sh
 
 ## Yocto SDK
+- required at least 300GB to generate fsl-image-gui SDK 
 - sh shell-root.sh
 - source /yocto/000-drop-user.sh
 - source /yocto/002-install-repo-fsl-sumo-imx-4.14.98-2.0.1_patch-var01.sh

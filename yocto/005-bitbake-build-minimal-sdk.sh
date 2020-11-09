@@ -4,4 +4,6 @@
 #Or with Qt content:
 #bitbake fsl-image-qt5
 
-bitbake core-image-minimal -c populate_sdk
+#bitbake core-image-minimal -c populate_sdk
+
+bitbake fsl-image-gui -c populate_sdk

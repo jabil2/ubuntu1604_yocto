@@ -8,5 +8,5 @@ if [ -d build_xwayland ]; then
 else
    repo init -u https://github.com/varigit/variscite-bsp-platform -b dunfell
    repo sync -j4
-   MACHINE=imx8mm-var-dart DISTRO=fsl-imx-xwayland . var-setup-release.sh -b build_xwayland
+   MACHINE=imx8mm-var-dart DISTRO=fslc-x11 . setup-environment build_xwayland
 fi

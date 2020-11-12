@@ -3,3 +3,5 @@ var-fslc-*/
 .bash_history
 .repoconfig
 
+.wget-hsts
+.subversion/

@@ -1,7 +1,7 @@
 
 
-mkdir -pv var-fslc-yocto-2.5-sumo
-cd var-fslc-yocto-2.5-sumo
+mkdir -pv ~/var-fslc-yocto-2.5-sumo
+cd ~/var-fslc-yocto-2.5-sumo
 
 if [ -d build_xwayland ]; then
    source setup-environment build_xwayland

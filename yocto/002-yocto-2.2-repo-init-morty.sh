@@ -1,6 +1,6 @@
 
-mkdir var-fslc-yocto-2.2-morty
-cd var-fslc-yocto-2.2-morty
+mkdir ~/var-fslc-yocto-2.2-morty
+cd ~/var-fslc-yocto-2.2-morty
 
 if [ -d build_xwayland ]; then
    source setup-environment build_xwayland

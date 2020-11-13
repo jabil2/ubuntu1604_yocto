@@ -10,3 +10,11 @@ else
    repo sync -j4
    MACHINE=imx8mm-var-dart DISTRO=fslc-x11 . setup-environment build_xwayland
 fi
+
+
+bitbake-layers show-recipes "*-image-*"
+bitbake-layers show-recipes "*gcc*"
+bitbake-layers show-layers
+bitbake fsl-image-gui
+bitbake fsl-image-gui -c populate_sdk
+

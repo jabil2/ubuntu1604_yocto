@@ -26,13 +26,18 @@ cd $SRC
 
 
 cd ..
+
+pip3 install --user -r sources/poky/bitbake/toaster-requirements.txt
+
 source sources/poky/oe-init-build-env
 
-bitbake-layers show-recipes "*-image-*"
-bitbake-layers show-recipes "*gcc*"
+source toaster start webport=0.0.0.0:8000
 
-bitbake-layers show-layers
 
-bitbake fsl-image-gui
-bitbake fsl-image-gui -c populate_sdk
+#bitbake-layers show-recipes "*-image-*"
+#bitbake-layers show-recipes "*gcc*"
+#bitbake-layers show-layers
+#bitbake fsl-image-gui
+#bitbake fsl-image-gui -c populate_sdk
+bitbake core-image-sato-sdk
 

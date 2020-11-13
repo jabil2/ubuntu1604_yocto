@@ -1,0 +1,11 @@
+bitbake-cookerdaemon.log
+buildhistory
+cache
+#conf
+downloads
+sstate-cache
+tmp
+toaster_runbuilds.log
+toaster_web.log
+*.pid
+

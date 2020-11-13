@@ -31,11 +31,12 @@ COPY ./repo-1 /usr/local/bin/repo
 #libi2c-dev # do not install to avoid conflicts betweem i2c/i2c-dev(old) and i2c/smbus.h(new)
 RUN DEBIAN_FRONTEND=noninteractive  apt-get install -y cmake libinput-dev  ninja-build
 
-RUN DEBIAN_FRONTEND=noninteractive  apt-get install -y nano mc htop
+RUN DEBIAN_FRONTEND=noninteractive  apt-get install -y nano mc htop net-tools daemon python-virtualenv
+
 
 
 # install SDK
-COPY ./sdk/fsl-imx-xwayland-glibc-x86_64-fsl-image-gui-aarch64-toolchain-4.14-sumo.sh /opt
-RUN /opt/fsl-imx-xwayland-glibc-x86_64-fsl-image-gui-aarch64-toolchain-4.14-sumo.sh -y
-RUN rm -fv /opt/fsl-imx-xwayland-glibc-x86_64-fsl-image-gui-aarch64-toolchain-4.14-sumo.sh -y
+#COPY ./sdk/fsl-imx-xwayland-glibc-x86_64-fsl-image-gui-aarch64-toolchain-4.14-sumo.sh /opt
+#RUN /opt/fsl-imx-xwayland-glibc-x86_64-fsl-image-gui-aarch64-toolchain-4.14-sumo.sh -y
+#RUN rm -fv /opt/fsl-imx-xwayland-glibc-x86_64-fsl-image-gui-aarch64-toolchain-4.14-sumo.sh -y
 

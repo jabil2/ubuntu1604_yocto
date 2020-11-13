@@ -5,3 +5,8 @@ var-fslc-*/
 
 .wget-hsts
 .subversion/
+.cache/ 
+.config/ 
+.local/ 
+.selected_editor 
+.ssh/

@@ -33,6 +33,10 @@ RUN DEBIAN_FRONTEND=noninteractive  apt-get install -y cmake libinput-dev  ninja
 
 RUN DEBIAN_FRONTEND=noninteractive  apt-get install -y nano mc htop net-tools daemon python-virtualenv
 
+RUN DEBIAN_FRONTEND=noninteractive  apt-get install -y sudo
+
+
+
 
 
 # install SDK
